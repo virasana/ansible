@@ -34,4 +34,31 @@ jeanpierre@lappie:~/git/learning/ansible$ cat /etc/hosts
 
 You should be able to ssh onto the containers
 
+As there is a chicken-and-egg scenarion, you might need to run the above process twice to get the hosts file created in the right sequence.  
 
+Eventually, running ./start-ansible.sh will generate the correct ansible test:
+
+```bash
+ansible01 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+ansible02 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+ansible03 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+
+```
