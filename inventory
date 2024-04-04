@@ -1,0 +1,4 @@
+[all]
+ansible01 ansible_user=root
+ansible02 ansible_user=root
+ansible03 ansible_user=root
